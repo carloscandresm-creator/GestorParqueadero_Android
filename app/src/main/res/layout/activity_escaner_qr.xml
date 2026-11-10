@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingreso de vehículo"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp" />
+
+    <FrameLayout
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:background="#F5F5F5"
+        android:layout_marginBottom="20dp">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcodeScanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Coloque el código QR frente al escáner"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:background="#FFFFFF"
+            android:padding="8dp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnEscanearQR"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Escanear QR"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#808080" />
+
+    <Button
+        android:id="@+id/btnCancelarQR"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Cancelar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50" />
+
+</LinearLayout>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +15,22 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
+            android:name=".RegistroVisitanteActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SalidaQRActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EscanerQRActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegistroVehiculoActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -17,6 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
     </application>
 

@@ -16,7 +16,7 @@
         android:background="#F5F5F5"
         android:visibility="visible">
 
-        <!-- Encabezado verde -->
+        <!-- Encabezado -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,8 +33,7 @@
 
         </LinearLayout>
 
-
-        <!-- Formulario de inicio de sesión -->
+        <!-- Formulario -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +52,6 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp" />
 
-
             <EditText
                 android:id="@+id/etCedula"
                 android:layout_width="match_parent"
@@ -64,7 +62,6 @@
                 android:padding="12dp"
                 android:textSize="14sp"
                 android:layout_marginBottom="10dp" />
-
 
             <EditText
                 android:id="@+id/etPassword"
@@ -77,7 +74,6 @@
                 android:textSize="14sp"
                 android:layout_marginBottom="16dp" />
 
-
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
@@ -88,7 +84,6 @@
                 android:backgroundTint="#4CAF50"
                 android:padding="12dp" />
 
-
             <TextView
                 android:id="@+id/tvMensaje"
                 android:layout_width="wrap_content"
@@ -97,7 +92,6 @@
                 android:textSize="14sp"
                 android:textColor="#E53935"
                 android:layout_marginTop="10dp" />
-
 
             <!-- Opciones inferiores -->
 
@@ -117,14 +111,12 @@
                     android:textSize="14sp"
                     android:padding="6dp" />
 
-
                 <View
                     android:layout_width="1dp"
                     android:layout_height="24dp"
                     android:background="#999999"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp" />
-
 
                 <TextView
                     android:id="@+id/tvRegistrarse"
@@ -142,7 +134,6 @@
 
     </LinearLayout>
 
-
     <!-- ==================== MENÚ PRINCIPAL ==================== -->
 
     <LinearLayout
@@ -150,28 +141,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="20dp"
         android:background="#F5F5F5"
         android:visibility="gone">
 
-
-        <!-- Encabezado del menú -->
+        <!-- ENCABEZADO -->
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
-
+            android:layout_marginBottom="35dp">
 
             <ImageView
-                android:layout_width="90dp"
+                android:layout_width="105dp"
                 android:layout_height="90dp"
                 android:src="@drawable/logo2"
                 android:contentDescription="Logo ParkQR"
+                android:scaleType="fitCenter"
                 android:layout_marginEnd="12dp" />
-
 
             <TextView
                 android:id="@+id/tvBienvenidaMenu"
@@ -179,104 +168,145 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Bienvenido, Usuario"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:textColor="#333333"
                 android:textStyle="bold" />
 
+            <!-- ICONO DE TRES LÍNEAS -->
 
             <ImageView
                 android:id="@+id/ivMenuIcon"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/ic_menu"
                 android:contentDescription="Menú"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"
+                android:padding="5dp"
                 android:clickable="true"
                 android:focusable="true" />
 
         </LinearLayout>
 
-
-        <!-- Título -->
+        <!-- TÍTULO -->
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menú principal"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:textColor="#555555"
-            android:layout_gravity="center"
-            android:layout_marginBottom="16dp" />
-
+            android:gravity="center"
+            android:layout_marginBottom="35dp" />
 
         <!-- INGRESO QR -->
 
-        <Button
-            android:id="@+id/btnIngreso"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🚗 Ingreso QR"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#4CAF50"
-            android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
 
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/icono1"
+                android:background="#00B82E"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="Vehículo" />
+
+            <Button
+                android:id="@+id/btnIngreso"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ingreso de vehículo (escáner QR)"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#00B82E"
+                android:padding="5dp" />
+
+        </LinearLayout>
 
         <!-- SALIDA QR -->
 
-        <Button
-            android:id="@+id/btnSalida"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🚗 Salida QR"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#4CAF50"
-            android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
 
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/icono1"
+                android:background="#00B82E"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="Vehículo" />
 
-        <!-- VISITANTE -->
+            <Button
+                android:id="@+id/btnSalida"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Salida de vehículo (escáner QR)"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#00B82E"
+                android:padding="5dp" />
 
-        <Button
-            android:id="@+id/btnVisitante"
+        </LinearLayout>
+
+        <!-- VEHÍCULO VISITANTE -->
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🚗 Visitante"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#4CAF50"
-            android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="35dp">
 
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/icono1"
+                android:background="#00B82E"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="Vehículo" />
 
-        <!-- REGISTRO -->
+            <Button
+                android:id="@+id/btnVisitante"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Vehículo visitante"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#00B82E"
+                android:padding="5dp" />
 
-        <Button
-            android:id="@+id/btnRegistroVehiculo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="📋 Registro"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#4CAF50"
-            android:padding="12dp"
-            android:layout_marginBottom="20dp" />
-
+        </LinearLayout>
 
         <!-- CERRAR SESIÓN -->
 
         <Button
             android:id="@+id/btnCerrarSesion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Cerrar sesión"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:backgroundTint="#2E7D32"
-            android:padding="12dp" />
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:backgroundTint="#087D28" />
 
     </LinearLayout>
 

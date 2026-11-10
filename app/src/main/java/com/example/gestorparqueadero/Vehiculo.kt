@@ -1,4 +1,4 @@
-package com.example.gestorpragueadero
+package com.example.gestorparqueadero
 
 data class Vehiculo(
     val placa: String,

@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
+import android.content.Intent
 class MainActivity : AppCompatActivity() {
 
     private lateinit var loginLayout: LinearLayout
@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnIngreso: Button
     private lateinit var btnSalida: Button
     private lateinit var btnVisitante: Button
-    private lateinit var btnRegistroVehiculo: Button
     private lateinit var btnCerrarSesion: Button
     private lateinit var ivMenuIcon: ImageView
 
@@ -55,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         btnIngreso = findViewById(R.id.btnIngreso)
         btnSalida = findViewById(R.id.btnSalida)
         btnVisitante = findViewById(R.id.btnVisitante)
-        btnRegistroVehiculo = findViewById(R.id.btnRegistroVehiculo)
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion)
         ivMenuIcon = findViewById(R.id.ivMenuIcon)
 
@@ -115,43 +113,21 @@ class MainActivity : AppCompatActivity() {
 
         // Ingreso QR
         btnIngreso.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Ingreso mediante código QR",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, EscanerQRActivity::class.java)
+            startActivity(intent)
         }
 
         // Salida QR
         btnSalida.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Salida mediante código QR",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, SalidaQRActivity::class.java)
+            startActivity(intent)
         }
-
         // Visitante
         btnVisitante.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Registro de visitante",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, RegistroVisitanteActivity::class.java)
+            startActivity(intent)
         }
 
-        // Registro de vehículo
-        btnRegistroVehiculo.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Registro de vehículo",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
 
         // Cerrar sesión
         btnCerrarSesion.setOnClickListener {

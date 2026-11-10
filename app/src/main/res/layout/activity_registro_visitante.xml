@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de visitante"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp" />
+
+        <EditText
+            android:id="@+id/etPlacaVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Placa del vehículo"
+            android:inputType="textCapCharacters"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de vehículo"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/spTipoVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:id="@+id/etApartamentoVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apartamento que visita"
+            android:inputType="text"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:id="@+id/etNombreVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del visitante"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="25dp" />
+
+        <TextView
+            android:id="@+id/tvFechaHoraVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha y hora: Automáticas al registrar"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp" />
+
+        <Button
+            android:id="@+id/btnRegistrarVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Registrar visitante"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/btnVolverVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Volver al menú"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#808080"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+</ScrollView>

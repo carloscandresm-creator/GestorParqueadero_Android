@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro de vehículo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:layout_marginBottom="30dp" />
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Placa del vehículo"
+        android:inputType="textCapCharacters"
+        android:layout_marginBottom="15dp" />
+
+    <Spinner
+        android:id="@+id/spTipoVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:id="@+id/etPropietario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del propietario"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:id="@+id/etFechaIngreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de ingreso"
+        android:inputType="date"
+        android:layout_marginBottom="25dp" />
+
+    <Button
+        android:id="@+id/btnRegistrarVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar vehículo"
+        android:backgroundTint="#4CAF50" />
+
+    <Button
+        android:id="@+id/btnVolverVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver al menú"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4CAF50" />
+
+</LinearLayout>

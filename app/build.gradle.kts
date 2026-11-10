@@ -39,6 +39,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
     implementation("com.google.code.gson:gson:2.13.2")
 
